@@ -185,12 +185,11 @@ Notice that the differential operator is continuous (it is enough to prove it fo
 The previous consideration leads us to propose the following \textit{transfer learning algoritm}:
 \begin{enumerate}
 	\setlength\itemsep{-0.2em}
-  	\item	Train a PINN for $u-u_{\delta}$.
-	\item	Set $\delta>0$ as small as possible or equal to  $0$.
+	\item	Set $\delta>0$ as small as possible.
+  	\item	Train a PINN for $u_{\delta}$.
 \end{enumerate}
 
-Training a PINN for $u-u_{\delta}$ is beneficial since this way we replace the possibly complicated function 
-$f\in L^{\infty}\left(B_{1}\right)$ with a much better behaved, compactly supported function, which might speed up optimization. By setting  $\delta>0$ as small as possible the trained PINN-approximation is an approximation for $u$ as well, which follows from the robustness property discussed above.
+By setting  $\delta>0$ as small as possible the trained PINN-approximation is an approximation for $u$ as well, which follows from the robustness property discussed above.
 
 
 \begin{thebibliography}{99}
